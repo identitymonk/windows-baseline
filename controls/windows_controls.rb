@@ -159,7 +159,7 @@ control 'windows-007' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   describe security_policy do
-    its('LockoutDuration') { should be >= 900 }
+    its('LockoutDuration') { should be >= 15 }
   end
 end
 
@@ -205,7 +205,7 @@ control 'windows-009' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   describe security_policy do
-    its('ResetLockoutCount') { should be >= 900 }
+    its('ResetLockoutCount') { should be >= 15 }
   end
 end
 
@@ -269,7 +269,7 @@ control 'windows-012' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   describe security_policy do
-    its('SeTcbPrivilege') { should eq ['S-1-0-0'] }
+    its('SeTcbPrivilege') { should eq [] }
   end
 end
 

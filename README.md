@@ -102,16 +102,15 @@ We use a yml attribute file to steer the configuration, the following options ar
 InSpec makes it easy to run your tests wherever you need. More options listed here: [InSpec cli](http://inspec.io/docs/reference/cli/)
 
 ```
+# run profile locally and directly from Github
+$ inspec exec https://github.com/dev-sec/windows-baseline
+
 # run profile locally
 $ git clone https://github.com/dev-sec/windows-baseline
 $ inspec exec windows-baseline
 
-# run profile locally and directly from Github
-$ inspec exec https://github.com/dev-sec/windows-baseline
-
 # run profile on remote host via WinRM
 inspec exec windows-baseline -t winrm://<ip-address>:5985 --user=<username> --password=<password>
-
 
 # run profile on remote host via WinRM and define attribute value
 inspec exec windows-baseline -t winrm://<ip-address>:5985 --user=<username> --password=<password> --attrs sample_attributes.yml
@@ -136,6 +135,7 @@ inspec exec windows-baseline --controls 'windows-001'
 
 * Patrick Muench [atomic111](https://github.com/atomic111)
 * Torsten Löbner [TLoebner](https://github.com/TLoebner)
+* Karsten Mueller [karstenmueller](https://github.com/karstenmueller)
 
 ## License and Author
 
